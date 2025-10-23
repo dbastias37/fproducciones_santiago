@@ -33,8 +33,16 @@
     header{position:sticky;top:0;z-index:50;background:rgba(15,15,16,.8);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #1e1f22}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:10px var(--pad)}
     .brand{display:flex;gap:10px;align-items:center}
-    .brand img{width:36px;height:36px;object-fit:contain}
-    .brand b{font-weight:700;letter-spacing:.3px}
+    .brand img{
+      height: 48px;        /* alto base para mobile */
+      width: auto;
+      object-fit: contain;
+    }
+    @media (min-width: 768px){
+      .brand img{
+        height: 64px;      /* más grande en escritorio */
+      }
+    }
     .menu{display:flex;gap:18px;align-items:center}
     .menu a{opacity:.85}
     .menu a:hover{opacity:1}
@@ -125,10 +133,18 @@
   <!-- ====== NAVBAR ====== -->
   <header>
     <div class="nav wrap">
-      <a class="brand" href="#top" aria-label="Inicio">
-        <!-- Reemplaza por tu logo: assets/logo/logo.svg -->
-        <img src="assets/logo/logo.svg" alt="Logo" />
-        <b>Tu Productora</b>
+      <a class="brand" href="#top" aria-label="Inicio — Producciones Santiago">
+        <!-- Logo principal -->
+        <img
+          src="assets/logo/produccionessantiago.png"
+          alt="Producciones Santiago"
+          width="auto"
+          height="auto"
+          loading="eager"
+          decoding="async"
+          srcset="assets/logo/produccionessantiago.png 1x, assets/logo/produccionessantiago.png 2x"
+          style="display:block"
+        />
       </a>
       <nav class="menu" aria-label="Principal">
         <a href="#nosotros">Nosotros</a>
