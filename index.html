@@ -82,7 +82,21 @@
     }
     h1{font-size:clamp(40px,7vw,72px);line-height:1.05;margin:0 0 8px}
     .sub{max-width:760px;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .cta-row{
+      display: flex;
+      justify-content: center; /* centra horizontalmente */
+      align-items: center;      /* alinea verticalmente */
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      text-align: center;
+    }
+    @media (max-width: 600px){
+      .cta-row a{
+        width: 100%;
+        text-align: center;
+      }
+    }
     .cta-outline{padding:10px 14px;border-radius:999px;border:1px solid #ffffff40;color:#fff}
 
     section{padding:64px 0;border-top:1px solid #1e1f22}
@@ -199,7 +213,7 @@
     <!-- Contenido del hero -->
     <div class="wrap hero-inner">
       <h1>Eventos únicos</h1>
-      <p class="sub">Producción creativa y despliegue técnico para eventos corporativos, congresos, lanzamientos de producto e instituciones. <em>Convertimos ideas en experiencias memorables.</em></p>
+      <p class="sub">Producción creativa y despliegue técnico para eventos corporativos, congresos, lanzamientos de producto e instituciones.<br /><em>Convertimos ideas en experiencias memorables.</em></p>
       <div class="cta-row">
         <a class="cta" href="https://wa.me/56965383591?text=Hola%20Producciones%20Santiago,%20quiero%20cotizar%20un%20evento" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
         <a class="cta-outline" href="https://www.instagram.com/magoofthedrone_audiovisual/" target="_blank" rel="noopener">Ver más en Instagram</a>
