@@ -48,9 +48,38 @@
     .menu a:hover{opacity:1}
     .cta{padding:10px 14px;border-radius:999px;background:var(--brand);color:#fff;border:0;font-weight:600}
 
-    /* HERO */
-    .hero{display:grid;min-height:72vh;place-items:center;background:linear-gradient(180deg,#111 0%,#0f0f1080 60%,#0f0f10 100%), url('assets/img/hero-placeholder.jpg') center/cover no-repeat}
-    .hero-inner{padding:8vh 0}
+    /* ====== HERO ====== */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 15, 16, 0.7) 0%, rgba(15, 15, 16, 0.9) 70%, #0f0f10 100%);
+      z-index: 1;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 8vh 0;
+    }
     h1{font-size:clamp(40px,7vw,72px);line-height:1.05;margin:0 0 8px}
     .sub{max-width:760px;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
     .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
@@ -158,12 +187,22 @@
 
   <!-- ====== HERO ====== -->
   <main id="top" class="hero">
+    <!-- Video de fondo -->
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/video/work-03.mp4" type="video/mp4" />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <!-- Capa de oscurecimiento -->
+    <div class="overlay"></div>
+
+    <!-- Contenido del hero -->
     <div class="wrap hero-inner">
       <h1>Eventos únicos</h1>
-      <p class="sub">Producción creativa y despliegue técnico para eventos corporativos, congresos, lanzamientos de producto, inauguraciones, matrimonios y más.</p>
+      <p class="sub">Producción creativa y despliegue técnico para eventos corporativos, congresos, lanzamientos de producto e instituciones. <em>Convertimos ideas en experiencias memorables.</em></p>
       <div class="cta-row">
-        <a class="cta" href="https://wa.me/56965383591" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
-        <a class="cta-outline" href="https://www.instagram.com/magoofthedrone_audiovisual" target="_blank" rel="noopener">Ver más en Instagram</a>
+        <a class="cta" href="https://wa.me/56965383591?text=Hola%20Producciones%20Santiago,%20quiero%20cotizar%20un%20evento" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <a class="cta-outline" href="https://www.instagram.com/magoofthedrone_audiovisual/" target="_blank" rel="noopener">Ver más en Instagram</a>
       </div>
     </div>
   </main>
