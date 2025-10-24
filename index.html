@@ -122,10 +122,8 @@
     /* CONTACTO */
     .contact{display:grid;gap:18px;grid-template-columns:1.1fr .9fr}
     .contact .box{background:#141416;border:1px solid #232428;border-radius:16px;padding:18px}
-    .contact label{display:block;font-weight:600;margin:.4rem 0 .25rem}
-    .contact input,.contact textarea{width:100%;background:#0d0e10;border:1px solid #2a2b31;border-radius:10px;padding:10px;color:#fff}
-    .contact textarea{min-height:120px;resize:vertical}
-    .contact .actions{display:flex;gap:10px;margin-top:10px}
+    .contact-embed{width:100%}
+    .contact .box iframe{width:100%;min-height:720px;border:0}
 
     footer{padding:28px 0;color:#9b9ca1;text-align:center}
 
@@ -383,31 +381,39 @@
   <!-- ====== CONTACTO ====== -->
   <section id="contacto">
     <div class="wrap contact">
+      <!-- Caja izquierda: IFRAME JOTFORM -->
       <div class="box">
         <h2>Contacto</h2>
         <p class="lead">Deja tus datos y te respondemos a la brevedad.</p>
-        <!-- Formulario estático. Para uso real, conecta con Formspree, Netlify Forms o backend propio. -->
-        <form onsubmit="event.preventDefault(); window.location.href='gracias.html'">
-          <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre" required />
-          <label>Email</label>
-          <input type="email" placeholder="tu@email.com" required />
-          <label>Teléfono</label>
-          <input type="tel" placeholder="+56 9 ..." />
-          <label>Empresa</label>
-          <input type="text" placeholder="Nombre de empresa (opcional)" />
-          <label>Mensaje</label>
-          <textarea placeholder="Cuéntanos brevemente tu necesidad"></textarea>
-          <div class="actions">
-            <button class="cta" type="submit">Enviar</button>
-            <a class="cta-outline" href="https://wa.me/56900000000" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </form>
+
+        <div class="contact-embed">
+          <iframe
+            id="JotFormIFrame-252959018709064"
+            title="Formulario de contacto y cotización Producción Audiovisual"
+            onload="window.parent.scrollTo(0,0)"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen; payment"
+            src="https://form.jotform.com/252959018709064"
+            frameborder="0"
+            style="min-width:100%;max-width:100%;height:820px;border:none;"
+            scrolling="no">
+          </iframe>
+        </div>
+
+        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+        <script>
+          window.jotformEmbedHandler(
+            "iframe[id='JotFormIFrame-252959018709064']",
+            "https://form.jotform.com/"
+          );
+        </script>
       </div>
+
+      <!-- Caja derecha: se mantiene tal cual -->
       <div class="box">
         <h3>Datos directos</h3>
         <p><strong>Tel:</strong> <a href="tel:+56965383591">+56 9 6538 3591</a><br/>
-           <strong>Email:</strong> <a href="mailto:contacto@tuempresa.cl">contacto@tuempresa.cl</a></p>
+           <strong>Email:</strong> <a href="mailto:F.produccionessantiago@gmail.com">F.produccionessantiago@gmail.com</a></p>
         <p><strong>Instagram:</strong> <a href="https://www.instagram.com/magoofthedrone_audiovisual" target="_blank" rel="noopener">@magoofthedrone_audiovisual</a></p>
         <p class="lead">Tip: agrega un texto breve que despeje objeciones (plazos, cobertura, formatos, etc.).</p>
       </div>
