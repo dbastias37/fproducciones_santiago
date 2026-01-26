@@ -109,6 +109,14 @@
     .card{background:#141416;border:1px solid #232428;border-radius:16px;padding:18px}
     .card h3{margin:6px 0 6px;font-size:18px}
     .card p{color:var(--muted);font-size:14px}
+    /* Quitar iconos (cuadros amarillos) en tarjetas de Servicios */
+    #servicios .grid.svc .card > img {
+      display: none !important;
+    }
+    /* Ajustar espaciado del título ya que no hay icono arriba */
+    #servicios .grid.svc .card h3 {
+      margin-top: 0;
+    }
 
     /* TRABAJOS */
     .grid.work{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
