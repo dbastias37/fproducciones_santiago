@@ -153,20 +153,6 @@
       .modal-content{grid-template-columns:1fr}
     }
   
-    /* ====== LOGOS CAROUSEL — loop perfecto (JS) ====== */
-    .logos-carousel{position:relative;overflow:hidden;border:1px solid #232428;border-radius:16px;padding:14px;background:#141416}
-    .logos-carousel::before,.logos-carousel::after{content:"";position:absolute;top:0;bottom:0;width:80px;pointer-events:none;z-index:2}
-    .logos-carousel::before{left:0;background:linear-gradient(90deg,#141416 15%,rgba(20,20,22,0))}
-    .logos-carousel::after{right:0;background:linear-gradient(270deg,#141416 15%,rgba(20,20,22,0))}
-    .logos-carousel .viewport{position:relative;overflow:hidden}
-    .logos-carousel .track{display:flex;align-items:center;will-change:transform;gap:0}
-    .logos-carousel .group{display:flex}
-    .logos-carousel .logo-item{flex:0 0 180px;display:flex;align-items:center;justify-content:center;padding:0 24px}
-    .logos-carousel img{display:none}
-    .logos-carousel .logo-item svg{max-height:42px; width:auto; display:block;}
-    .logos-carousel.paused .track{transition:none}
-    @media (prefers-reduced-motion: reduce){.logos-carousel .track{transform:none !important}}
-
   </style>
 </head>
 <body>
@@ -250,18 +236,18 @@
           </div>
         </article>
 
-        <!-- Diseño Gráfico -->
+        <!-- Videos con dron -->
         <article class="card">
-          <img src="assets/img/icon-diseno.svg" alt="Diseño gráfico" width="48" height="48" />
-          <h3>Diseño Gráfico</h3>
-          <p>Diseñamos la identidad visual que comunica el valor de tu marca o evento.</p>
+          <img src="assets/img/icon-video.svg" alt="Videos con dron" width="48" height="48" />
+          <h3>Videos con dron</h3>
+          <p>Tomas aéreas cinematográficas para eventos, inmobiliarias, turismo y marcas.</p>
           <div class="svc-details" style="display:none">
-            <img src="assets/img/servicio-ejemplo.jpg" alt="Diseño gráfico" />
-            <p>Desarrollamos piezas gráficas coherentes con la imagen de tu empresa o proyecto. Desde branding hasta adaptaciones para redes, cuidamos cada detalle visual.</p>
+            <img src="assets/img/servicio-placeholder.jpg" alt="Videos con dron" />
+            <p>Coordinamos vuelos seguros con planificación previa, tomas 4K y estética cinematográfica para elevar cada proyecto.</p>
             <ul>
-              <li>Diseño de logotipos y branding</li>
-              <li>Piezas gráficas y motion graphics</li>
-              <li>Material publicitario y digital</li>
+              <li>Tomas aéreas 4K y movimientos suaves</li>
+              <li>Planificación de ruta y seguridad en locación</li>
+              <li>Edición con enfoque cinematográfico</li>
             </ul>
           </div>
         </article>
@@ -282,18 +268,18 @@
           </div>
         </article>
 
-        <!-- Diseño 3D -->
+        <!-- Videos matrimoniales -->
         <article class="card">
-          <img src="assets/img/icon-3d.svg" alt="Diseño 3D" width="48" height="48" />
-          <h3>Diseño 3D y Render</h3>
-          <p>Visualizamos tus ideas antes de producirlas, con modelado 3D y simulaciones realistas.</p>
+          <img src="assets/img/icon-video.svg" alt="Videos matrimoniales" width="48" height="48" />
+          <h3>Videos matrimoniales</h3>
+          <p>Registro emocional y elegante del día completo, con entrega lista para compartir.</p>
           <div class="svc-details" style="display:none">
-            <img src="assets/img/servicio-ejemplo.jpg" alt="Diseño 3D" />
-            <p>Elaboramos renders de stands, escenarios, productos o ambientaciones para que puedas ver el resultado antes de invertir. Ideal para presentaciones y aprobaciones previas.</p>
+            <img src="assets/img/servicio-placeholder.jpg" alt="Videos matrimoniales" />
+            <p>Cubrimos ceremonia y celebración con audio cuidado y entrega de highlights más versión extendida.</p>
             <ul>
-              <li>Modelado 3D y renderizado fotorrealista</li>
-              <li>Animaciones técnicas y visuales</li>
-              <li>Diseño de stands y escenografía</li>
+              <li>Cobertura de ceremonia y celebración</li>
+              <li>Registro de audio y momentos clave</li>
+              <li>Video resumen (highlights) + versión extendida</li>
             </ul>
           </div>
         </article>
@@ -351,21 +337,8 @@
     <div class="wrap">
       <h2>Nuestros clientes</h2>
       <p class="lead">Ellos ya nos eligieron, ahora es tu turno.</p>
-      <div class="logos-carousel" aria-label="Carrusel de clientes">
-        <div class="viewport">
-          <div class="track">
-            <!-- Grupo base ÚNICO: el script lo clonará para loop perfecto -->
-            <div class="group">
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 1</text></svg></div>
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 2</text></svg></div>
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 3</text></svg></div>
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 4</text></svg></div>
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 5</text></svg></div>
-              <div class="logo-item"><svg xmlns="http://www.w3.org/2000/svg" width="240" height="42"><rect width="100%" height="100%" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="16" fill="#000">Logo 6</text></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="lead">Clientes y alianzas: solicita nuestro portafolio y referencias.</p>
+      <p><a class="cta-outline" href="#contacto">Solicitar portafolio</a></p>
     </div>
     </div>
   </section>
@@ -501,67 +474,5 @@
     })();
   </script>
 
-  <script>
-    // ====== Carrusel de logos — loop perfecto con ancho uniforme ======
-    (function(){
-      const car = document.querySelector('.logos-carousel');
-      if(!car) return;
-      const viewport = car.querySelector('.viewport');
-      const track = car.querySelector('.track');
-      if(!viewport || !track) return;
-
-      // Asegurar que exista al menos un grupo base
-      let base = track.querySelector('.group');
-      if(!base) return;
-
-      // Normalizar: quitar gaps de estilos heredados
-      track.style.gap = '0px';
-
-      // Duplicar grupos hasta cubrir 3× el ancho del viewport (buffer)
-      function ensureFill(){
-        const vw = viewport.clientWidth;
-        while(track.scrollWidth < vw * 3){
-          track.appendChild(base.cloneNode(true));
-        }
-      }
-
-      ensureFill();
-      let speed = 60; // px/s
-      let last = performance.now();
-      let offset = 0;
-      let paused = false;
-
-      // Pausa al hover
-      car.addEventListener('mouseenter', ()=> paused = true);
-      car.addEventListener('mouseleave', ()=> paused = false);
-
-      function step(now){
-        const dt = Math.min(0.05, (now - last)/1000); // limitar delta para no saltar
-        last = now;
-        if(!paused){
-          offset -= speed * dt;
-          // Si el primer grupo salió completamente por la izquierda, lo mandamos al final y compensamos offset
-          let first = track.firstElementChild;
-          if(first){
-            const w = first.getBoundingClientRect().width; // ancho real del grupo
-            // Cuando el offset negativo supera el ancho del primer grupo, recirculamos
-            if(-offset >= w){
-              offset += w;
-              track.appendChild(first);
-            }
-          }
-          track.style.transform = `translateX(${offset}px)`;
-        }
-        requestAnimationFrame(step);
-      }
-
-      window.addEventListener('resize', ()=>{
-        // Recalcular relleno al cambiar tamaño
-        ensureFill();
-      });
-
-      requestAnimationFrame(step);
-    })();
-  </script>
 </body>
 </html>
