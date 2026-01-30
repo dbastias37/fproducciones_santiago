@@ -122,6 +122,8 @@
     .grid.work{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
     .thumb{position:relative;border-radius:14px;overflow:hidden;border:1px solid #2a2b31}
     .thumb .cap{position:absolute;inset:auto 0 0 0;padding:10px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.7));font-size:14px}
+    .thumb video{width:100%;height:auto;display:block}
+    .thumb .work-video{object-fit:cover}
 
     /* CLIENTES */
     .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;align-items:center}
@@ -318,22 +320,20 @@
       <h2>Nuestro trabajo</h2>
       <p class="lead">Proyectos desarrollados con equipos profesionales de video, iluminación y sonido. Calidad 4K, planificación técnica y narrativa visual en cada entrega.</p>
       <div class="grid work">
-        <!-- Ejemplos de tarjetas: reemplaza src por tus assets en /assets/img o /assets/video -->
         <figure class="thumb">
-          <img src="assets/img/work-01.jpg" alt="Evento 1" />
-          <figcaption class="cap">Evento 1 — Descripción breve</figcaption>
+          <video class="work-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/work-01.jpg">
+            <source src="assets/video/trabajo1.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+          </video>
+          <figcaption class="cap">Trabajo 1 — Video</figcaption>
         </figure>
+
         <figure class="thumb">
-          <img src="assets/img/work-02.jpg" alt="Evento 2" />
-          <figcaption class="cap">Evento 2 — Descripción breve</figcaption>
-        </figure>
-        <figure class="thumb">
-          <video src="assets/video/work-03.mp4" controls preload="metadata" poster="assets/img/work-03.jpg"></video>
-          <figcaption class="cap">Evento 3 — Video corto</figcaption>
-        </figure>
-        <figure class="thumb">
-          <img src="assets/img/work-04.jpg" alt="Evento 4" />
-          <figcaption class="cap">Evento 4 — Descripción breve</figcaption>
+          <video class="work-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/work-02.jpg">
+            <source src="assets/video/trabajo2.mp4" type="video/mp4" />
+            Tu navegador no soporta video HTML5.
+          </video>
+          <figcaption class="cap">Trabajo 2 — Video</figcaption>
         </figure>
       </div>
       <p style="margin-top:16px"><a class="cta-outline" href="https://instagram.com/tuusuario" target="_blank" rel="noopener">Ver más proyectos</a></p>
@@ -348,14 +348,6 @@
       <p class="lead">Clientes y alianzas: solicita nuestro portafolio y referencias.</p>
       <p><a class="cta-outline" href="#contacto">Solicitar portafolio</a></p>
     </div>
-    </div>
-  </section>
-
-  <!-- ====== CALIDAD (opcional como página aparte) ====== -->
-  <section id="calidad">
-    <div class="wrap">
-      <h2>Política de calidad y ambiente</h2>
-      <p class="lead">Si trabajas con licitaciones o compras corporativas, agrega aquí tu política/certificaciones. También puedes mover esto a una página independiente (quality.html) y enlazarla desde el menú.</p>
     </div>
   </section>
 
